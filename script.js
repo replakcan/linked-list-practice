@@ -65,11 +65,7 @@ class LinkedList {
   }
 
   removeAt(index) {
-    const nodeList = this.list;
-
-    nodeList.splice(index, 1);
-
-    return nodeList;
+    this.list.splice(index, 1);
   }
 }
 
