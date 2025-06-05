@@ -61,11 +61,7 @@ class LinkedList {
   }
 
   insertAt(value, index) {
-    const nodeList = this.list;
-
-    nodeList.splice(index, 1, value);
-
-    return nodeList;
+    this.list.splice(index, 0, new Node(value))
   }
 
   removeAt(index) {
