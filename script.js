@@ -38,7 +38,7 @@ class LinkedList {
   }
 
   contains(value) {
-    return this.list.includes(value);
+    return this.list.some((el) => el.value == value);
   }
 
   find(value) {
