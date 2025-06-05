@@ -85,9 +85,24 @@ list.append("lion");
 list.append("monkey");
 list.prepend("honeyBee");
 list.prepend("essek");
+list.prepend("zortanca");
+list.removeAt(4);
+list.removeAt(4);
+list.pop()
+list.pop()
+console.log(list.at(1))
+console.log(list.at(3))
+console.log(list.at(0))
 
-console.log(list.size());
-console.log(list.head());
-console.log(list.tail());
+const sizeOfTheList = list.size()
+const firstElementOfTheList = list.head()
+const lastElementOfTheList = list.tail()
 
+console.log(list.contains("essek"))
+
+console.log(`size: ${sizeOfTheList}, head: ${firstElementOfTheList.value}, tail: ${lastElementOfTheList.value}`)
+
+list.insertAt("albino", 1)
+console.log(list.toString());
+list.insertAt("kuruhasan", 3)
 console.log(list.toString());
