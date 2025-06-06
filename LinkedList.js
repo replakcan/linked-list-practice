@@ -122,7 +122,7 @@ class LinkedList {
     let currentNode = head
 
     while (currentNode) {
-      if (currentNode.value == value) return index
+      if (currentNode.value == value) return { index, value: currentNode.value }
 
       currentNode = currentNode.nextNode
       index++
