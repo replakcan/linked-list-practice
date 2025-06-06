@@ -146,6 +146,46 @@ class LinkedList {
 
     return (rv += "null");
   }
+
+  insertAt(value, index) {
+    if (index == 0) {
+      this.prepend(value);
+
+      return;
+    }
+
+    const nodeToInsert = new Node(value);
+
+    const prevNode = this.at(index - 1);
+    const postNode = this.at(index);
+
+    nodeToInsert.nextNode = postNode;
+    prevNode.nextNode = nodeToInsert;
+  }
+
+  removeAt(index) {
+    if (!index || index >= this.size()) return;
+
+    if (index == 0) {
+      const head = this.headNode;
+
+      this.headNode = head.nextNode;
+
+      return;
+    }
+
+    const prevNode = this.at(index - 1);
+
+    if (index == this.size() - 1) {
+      prevNode.nextNode = null;
+
+      return;
+    }
+
+    const postNode = this.at(index + 1);
+
+    prevNode.nextNode = postNode;
+  }
 }
 
 export default LinkedList;
