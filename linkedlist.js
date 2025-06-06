@@ -174,9 +174,11 @@ newList.pop();
 console.log(newList.at(4));
 console.log(newList.tail());
 console.log(newList.size());
-console.log(newList.headNode.nextNode);
 
 console.log(newList.contains("dog"));
 console.log(newList.find("dog"));
+
+console.log(newList.contains("turtle"));
+console.log(newList.find("turtle"));
 
 console.log(newList.toString());
