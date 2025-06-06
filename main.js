@@ -33,4 +33,16 @@ console.log(newList.find("dog"));
 console.log(newList.contains("turtle"));
 console.log(newList.find("turtle"));
 
+console.log(newList.at(0))
+console.log(newList.at(1))
+console.log(newList.at(2))
+console.log(newList.at(3))
+
+console.log(newList.toString());
+
+newList.insertAt("essek", 1)
+
+
+newList.removeAt(2)
+
 console.log(newList.toString());
