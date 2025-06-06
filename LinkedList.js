@@ -51,7 +51,7 @@ class LinkedList {
   head() {
     const head = this.headNode
 
-    return head ? head.value : null
+    return head ? head : null
   }
 
   tail() {
@@ -66,7 +66,7 @@ class LinkedList {
       currentNode = currentNode.nextNode
     }
 
-    return currentNode.value
+    return currentNode
   }
 
   at(index) {
