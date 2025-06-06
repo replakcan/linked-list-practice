@@ -80,7 +80,7 @@ class LinkedList {
       indexCount++;
     }
 
-    return currentNode.value;
+    return currentNode;
   }
 
   pop() {
