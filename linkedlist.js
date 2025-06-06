@@ -101,13 +101,13 @@ class LinkedList {
     const head = this.headNode;
 
     if (!head) return null;
-    if (head.value == value) return true;
 
     let currentNode = head;
 
-    while (currentNode.nextNode) {
-      currentNode = currentNode.nextNode;
+    while (currentNode) {
       if (currentNode.value == value) return true;
+
+      currentNode = currentNode.nextNode;
     }
 
     return false;
@@ -119,16 +119,13 @@ class LinkedList {
     if (!head) return null;
 
     let index = 0;
-
-    if (head.value == value) return index;
-
     let currentNode = head;
 
-    while (currentNode.nextNode) {
+    while (currentNode) {
+      if (currentNode.value == value) return index;
+
       currentNode = currentNode.nextNode;
       index++;
-
-      if (currentNode.value == value) return index;
     }
 
     return null;
@@ -139,12 +136,12 @@ class LinkedList {
 
     if (!head) return "list is empty";
 
-    let rv = `( ${head.value} ) -> `;
+    let rv = "";
     let currentNode = head;
 
-    while (currentNode.nextNode) {
-      currentNode = currentNode.nextNode;
+    while (currentNode) {
       rv += `( ${currentNode.value} ) -> `;
+      currentNode = currentNode.nextNode;
     }
 
     return (rv += "null");
